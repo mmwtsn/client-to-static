@@ -1,0 +1,65 @@
+<section class="section solutions">
+  <div class="solution">
+    <h1 class="solution-header header-primary">
+      <span class="container"><%= @solution['title'] %></span>
+    </h1>
+  </div>
+
+  <p class="solution-subheader"><span class="container"><%= @solution['body'] %></span></p>
+</section>
+
+<section class="section scenarios">
+  <% @scenarios.each do |scenario| %>
+  <article class="scenario">
+    <img src="<%= scenario['avatar'] %>" />
+    <h1 class="scenario-header">"<%= scenario['quote'] %>"</h1>
+    <h2 class="scenario-subheader"><%= scenario['pitch'] %></h2>
+
+    <section class="products">
+    <% @products.each do |product| %>
+      <% if scenario['id'] == product['scenario_id'] %>
+      <div class="product">
+        <a href="=">
+          <img src="<%= product['icon_url'] %>" />
+          <strong class#"product-name"><%= product['name'] %></strong>
+        </a>
+
+        <p class#"product-description"><%= product['description'] %></p>
+      </div>
+    <% end %>
+    <% end %>
+    </section>
+
+  </article>
+  <% end %>
+</section>
+
+<section class="section resources">
+  <h1 class="section-header">Featured resources</h1>
+
+  <% @resources.each do |resource| %>
+  <div class="resource">
+    <p><a href="<%= resource['url'] %>"><%= resource['body'] %></a></p>
+  </div>
+  <% end %>
+</section>
+
+<code>
+  <strong>solution</strong>
+  <%= @solution %>
+</code>
+
+<code>
+  <strong>scenarios</strong>
+  <%= @scenarios %>
+</code>
+
+<code>
+  <strong>products</strong>
+  <%= @products %>
+</code>
+
+<code>
+  <strong>resources</strong>
+  <%= @resources %>
+</code>
