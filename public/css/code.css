@@ -1,0 +1,19 @@
+code {
+  max-width: 960px;
+  display: block;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 3px;
+  line-height: 2;
+}
+
+code:last-child {
+  margin-bottom: 150px;
+}
+
+code strong {
+  display: block;
+  font-size: 1.2rem;
+}
